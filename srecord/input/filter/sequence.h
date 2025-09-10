@@ -20,6 +20,8 @@
 #ifndef SRECORD_INPUT_FILTER_SEQUENCE_H
 #define SRECORD_INPUT_FILTER_SEQUENCE_H
 
+#include <cstdint>
+
 #include <srecord/input/filter.h>
 
 namespace srecord

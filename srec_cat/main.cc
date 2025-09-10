@@ -17,6 +17,7 @@
 //
 
 #include <iostream>
+#include <cstdint>
 #include <cstdlib>
 
 #include <srecord/input/catenate.h>

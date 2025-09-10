@@ -20,6 +20,7 @@
 #ifndef SRECORD_PRETTY_SIZE_H
 #define SRECORD_PRETTY_SIZE_H
 
+#include <cstdint>
 #include <string>
 
 namespace srecord

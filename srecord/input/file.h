@@ -19,6 +19,7 @@
 #ifndef SRECORD_INPUT_FILE_H
 #define SRECORD_INPUT_FILE_H
 
+#include <cstdint>
 #include <string>
 
 #include <srecord/input.h>

@@ -20,6 +20,7 @@
 #ifndef SRECORD_MEMORY_WALKER_H
 #define SRECORD_MEMORY_WALKER_H
 
+#include <cstdint>
 #include <memory>
 
 namespace srecord {

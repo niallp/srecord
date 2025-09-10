@@ -20,6 +20,7 @@
 #ifndef SRECORD_MEMORY_H
 #define SRECORD_MEMORY_H
 
+#include <cstdint>
 #include <string>
 
 #include <srecord/defcon.h>
