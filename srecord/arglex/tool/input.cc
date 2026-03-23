@@ -1076,6 +1076,17 @@ srecord::arglex_tool::get_input()
             }
             break;
 
+	case token_stm32h7_flashcrc:
+	    {
+                const char *name = token_name();
+                token_next();
+                uint32_t address = 0;
+                get_address(name, address);
+                ifp = input_filter_message_stm32::create(ifp, address, endian_little);
+	    }
+	    break;
+
+
         case token_tiger:
             {
                 const char *name = token_name();

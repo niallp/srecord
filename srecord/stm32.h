@@ -96,7 +96,8 @@ private:
       * The state instance variable is used to remember the running
       * value of the 32-bit cyclic redundancy check.
       */
-    uint32_t state{0xFFFFFFFF};
+    //uint32_t state{0xFFFFFFFF};
+    uint32_t state{0};		// for FLASH CRC
 
     /**
       * Current counter of the byte feeding
