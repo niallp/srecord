@@ -44,6 +44,8 @@ srecord::stm32::stm32(const stm32 &arg) : state(arg.state)
     }
 }
 
+srecord::stm32::stm32(uint32_t init, uint32_t xor_out)
+    : state(init), xor_out_(xor_out) {}
 
 srecord::stm32 &
 srecord::stm32::operator=(const stm32 &arg)
@@ -89,7 +91,7 @@ srecord::stm32::generator()
     uint32_t data = 0;
     for (size_t j = 0; j < wordsize; j++)
         data |= (buf[j] << (8 * j));
-    state = stm32_crc(state, data, 0x55555555);
+    state = stm32_crc(state, data, xor_out_);
     cnt = 0;
 }
 
