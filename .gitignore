@@ -81,3 +81,4 @@ m4/lt~obsolete.m4
 
 # clangd
 .cache/*
+/_build/

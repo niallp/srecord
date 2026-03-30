@@ -80,6 +80,7 @@
 #include <srecord/input/filter/message/crc16.h>
 #include <srecord/input/filter/message/crc32.h>
 #include <srecord/input/filter/message/stm32.h>
+#include <srecord/input/filter/message/stm32h7.h>
 #include <srecord/input/filter/message/fletcher16.h>
 #include <srecord/input/filter/message/fletcher32.h>
 #include <srecord/input/filter/message/gcrypt.h>
@@ -1076,15 +1077,15 @@ srecord::arglex_tool::get_input()
             }
             break;
 
-	case token_stm32h7_flashcrc:
-	    {
+        case token_stm32h7_flashcrc:
+            {
                 const char *name = token_name();
                 token_next();
                 uint32_t address = 0;
                 get_address(name, address);
-                ifp = input_filter_message_stm32::create(ifp, address, endian_little);
-	    }
-	    break;
+                ifp = input_filter_message_stm32h7::create(ifp, address, endian_little);
+            }
+            break;
 
 
         case token_tiger:
